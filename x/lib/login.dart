@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'signup.dart';
 
 class TwitterLogin extends StatelessWidget {
   const TwitterLogin({super.key});
@@ -14,19 +15,13 @@ class TwitterLogin extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 35),
             child: Column(
               children: [
-                const FaIcon(
-                  FontAwesomeIcons.xTwitter,
-                  size: 48,
-                ),
+                const FaIcon(FontAwesomeIcons.xTwitter, size: 48),
 
                 const SizedBox(height: 30),
 
                 const Text(
                   'Sign in to X',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
 
                 const SizedBox(height: 35),
@@ -36,10 +31,7 @@ class TwitterLogin extends StatelessWidget {
                   height: 48,
                   child: OutlinedButton.icon(
                     onPressed: () {},
-                    icon: const FaIcon(
-                      FontAwesomeIcons.google,
-                      size: 18,
-                    ),
+                    icon: const FaIcon(FontAwesomeIcons.google, size: 18),
                     label: const Text(
                       'Continue with Google',
                       style: TextStyle(color: Colors.black),
@@ -54,10 +46,7 @@ class TwitterLogin extends StatelessWidget {
                   height: 48,
                   child: OutlinedButton.icon(
                     onPressed: () {},
-                    icon: const FaIcon(
-                      FontAwesomeIcons.apple,
-                      size: 20,
-                    ),
+                    icon: const FaIcon(FontAwesomeIcons.apple, size: 20),
                     label: const Text(
                       'Continue with Apple',
                       style: TextStyle(color: Colors.black),
@@ -124,11 +113,19 @@ class TwitterLogin extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
-                const Text(
-                  'Sign up',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TwitterSignup()),
+                    );
+                  },
+                  child: const Text(
+                    'Sign up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
               ],

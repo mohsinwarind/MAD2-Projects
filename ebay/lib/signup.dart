@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'login.dart';
 class EbaySignup extends StatelessWidget {
   const EbaySignup({super.key});
 
@@ -118,13 +118,21 @@ class EbaySignup extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
-                const Text(
-                  'Sign in',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                SizedBox(
+  width: double.infinity,
+  height: 45,
+  child: OutlinedButton(
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => EbayLogin(),
+        ),
+      );
+    },
+    child: const Text('Create account'),
+  ),
+),
               ],
             ),
           ),

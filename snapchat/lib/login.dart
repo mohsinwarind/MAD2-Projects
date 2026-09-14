@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'signup.dart';
 class SnapchatLogin extends StatelessWidget {
   const SnapchatLogin({super.key});
 
@@ -97,13 +97,30 @@ class SnapchatLogin extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
-                const Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.underline,
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SnapchatSignup()),
+                    );
+                  },
+                  child: const Text(
+                    'Sign up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
+
+
+                // const Text(
+                //   'Sign Up',
+                //   style: TextStyle(
+                //     fontWeight: FontWeight.bold,
+                //     decoration: TextDecoration.underline,
+                //   ),
+                // ),
               ],
             ),
           ),

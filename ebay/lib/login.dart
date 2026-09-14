@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'signup.dart';
 
 class EbayLogin extends StatelessWidget {
   const EbayLogin({super.key});
@@ -16,10 +17,7 @@ class EbayLogin extends StatelessWidget {
               children: [
                 const Text(
                   'eBay',
-                  style: TextStyle(
-                    fontSize: 45,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
                 ),
 
                 const SizedBox(height: 35),
@@ -28,10 +26,7 @@ class EbayLogin extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Sign in',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                 ),
 
@@ -109,10 +104,7 @@ class EbayLogin extends StatelessWidget {
                   height: 48,
                   child: OutlinedButton.icon(
                     onPressed: () {},
-                    icon: const FaIcon(
-                      FontAwesomeIcons.google,
-                      size: 18,
-                    ),
+                    icon: const FaIcon(FontAwesomeIcons.google, size: 18),
                     label: const Text('Continue with Google'),
                   ),
                 ),
@@ -127,7 +119,12 @@ class EbayLogin extends StatelessWidget {
                   width: double.infinity,
                   height: 45,
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => EbaySignup()),
+                      );
+                    },
                     child: const Text('Create account'),
                   ),
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'signup.dart';
 class InstagramLogin extends StatelessWidget {
   const InstagramLogin({super.key});
 
@@ -148,13 +148,22 @@ class InstagramLogin extends StatelessWidget {
                   style: TextStyle(color: Colors.grey),
                 ),
 
-                const Text(
-                  'Sign up',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontWeight: FontWeight.bold,
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => InstagramSignup()),
+                    );
+                  },
+                  child: const Text(
+                    'Sign up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
+
               ],
             ),
           ),
