@@ -117,6 +117,8 @@ class Signup extends StatelessWidget {
               ),
             ),
 
+            const SizedBox(height: 25),
+
              // Login account
             SizedBox(
               height: 50,
@@ -132,6 +134,8 @@ class Signup extends StatelessWidget {
                   );
 
                 },
+
+                
 
                 child: const Text(
                   "Already have an account ? Login",
